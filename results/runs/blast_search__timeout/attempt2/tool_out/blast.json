@@ -1,0 +1,19 @@
+{
+  "tool": "mini_blast",
+  "query": "/home/workdir/artifacts/bioagent_fail/data/query_match.fa",
+  "db": "/home/workdir/artifacts/bioagent_fail/data/ref_hg38.fa",
+  "n_queries": 1,
+  "n_subjects": 2,
+  "n_hits": 1,
+  "hits": [
+    {
+      "query": "q1",
+      "subject": "chr1",
+      "score": 70.0,
+      "qlen": 80,
+      "slen": 800,
+      "identity_approx": 1.0
+    }
+  ],
+  "status": "PASS"
+}

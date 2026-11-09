@@ -1,0 +1,19 @@
+{
+  "tool": "faidx",
+  "input": "/home/workdir/artifacts/bioagent_fail/data/ref_hg38.fa",
+  "n_contigs": 2,
+  "total_length": 1400,
+  "contigs": [
+    {
+      "name": "chr1",
+      "length": 800,
+      "gc": 0.4938
+    },
+    {
+      "name": "chr2",
+      "length": 600,
+      "gc": 0.4917
+    }
+  ],
+  "status": "PASS"
+}

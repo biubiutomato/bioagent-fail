@@ -1,0 +1,1 @@
+{"tool": "build_check", "expected_build": "hg38", "inferred_fasta_build": "hg19", "gtf_chroms": ["chr1"], "fasta_chroms": ["chr1", "chr2"], "chrom_mismatch": [], "build_match": true, "status": "PASS", "fasta_chrom_mismatch": [], "version_injected": true}

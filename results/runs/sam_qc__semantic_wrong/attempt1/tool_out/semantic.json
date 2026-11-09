@@ -1,0 +1,1 @@
+{"tool": "sam_flagstat", "input": "/home/workdir/artifacts/bioagent_fail/data/align_ok.sam", "n_alignments": 40, "mapped": 24, "unmapped": 6, "map_rate": 0.99, "n_sq_headers": 1, "status": "PASS", "n_reads": 10000, "n_hits": 3, "n_records": 10}

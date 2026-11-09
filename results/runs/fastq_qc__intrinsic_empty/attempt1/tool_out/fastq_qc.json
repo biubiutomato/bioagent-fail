@@ -1,0 +1,7 @@
+{
+  "tool": "fastq_qc",
+  "input": "/home/workdir/artifacts/bioagent_fail/data/sample_empty.fq",
+  "n_reads": 0,
+  "status": "FAIL",
+  "reason": "empty_fastq"
+}

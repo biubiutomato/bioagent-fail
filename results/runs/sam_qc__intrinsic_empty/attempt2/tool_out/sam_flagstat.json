@@ -1,0 +1,10 @@
+{
+  "tool": "sam_flagstat",
+  "input": "/home/workdir/artifacts/bioagent_fail/data/align_empty.sam",
+  "n_alignments": 0,
+  "mapped": 0,
+  "unmapped": 0,
+  "map_rate": 0.0,
+  "n_sq_headers": 0,
+  "status": "FAIL"
+}

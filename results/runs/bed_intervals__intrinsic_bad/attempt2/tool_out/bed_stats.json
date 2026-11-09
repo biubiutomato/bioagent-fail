@@ -1,0 +1,9 @@
+{
+  "tool": "bed_stats",
+  "input": "/home/workdir/artifacts/bioagent_fail/data/peaks_bad.bed",
+  "n_intervals": 0,
+  "n_malformed": 2,
+  "total_bp": 0,
+  "chromosomes": {},
+  "status": "FAIL"
+}

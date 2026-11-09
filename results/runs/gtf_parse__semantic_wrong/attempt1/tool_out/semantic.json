@@ -1,0 +1,1 @@
+{"tool": "gtf_validate", "input": "/home/workdir/artifacts/bioagent_fail/data/genes_hg38.gtf", "n_records": 34, "n_malformed": 0, "n_genes": 12, "features": {"gene": 12, "exon": 12}, "chromosomes": {"chr1": 24}, "fasta_chrom_mismatch": [], "errors": [], "status": "PASS", "n_reads": 10000, "n_hits": 3, "n_alignments": 10, "map_rate": 0.99}

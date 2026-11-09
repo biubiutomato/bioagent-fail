@@ -1,0 +1,15 @@
+{
+  "tool": "build_check",
+  "expected_build": "hg38",
+  "inferred_fasta_build": "hg19",
+  "gtf_chroms": [
+    "chr1"
+  ],
+  "fasta_chroms": [
+    "chr1",
+    "chrM"
+  ],
+  "chrom_mismatch": [],
+  "build_match": false,
+  "status": "FAIL"
+}

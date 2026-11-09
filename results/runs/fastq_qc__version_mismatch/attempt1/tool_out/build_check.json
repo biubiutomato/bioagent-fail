@@ -1,0 +1,1 @@
+{"tool": "fastq_qc", "input": "/home/workdir/artifacts/bioagent_fail/data/sample_ok.fq", "n_reads": 80, "n_bases": 6000, "mean_length": 75.0, "mean_phred": 32.51, "gc_fraction": 0.5063, "n_fraction": 0.0, "min_length": 75, "max_length": 75, "status": "PASS", "flags": [], "inferred_fasta_build": "hg19", "expected_build": "hg38", "build_match": true, "fasta_chrom_mismatch": []}

@@ -1,0 +1,16 @@
+{
+  "tool": "gtf_validate",
+  "input": "/home/workdir/artifacts/bioagent_fail/data/genes_malformed.gtf",
+  "n_records": 0,
+  "n_malformed": 3,
+  "n_genes": 0,
+  "features": {},
+  "chromosomes": {},
+  "fasta_chrom_mismatch": [],
+  "errors": [
+    "line 1: expected 9 columns, got 2",
+    "line 2: expected 9 columns, got 3",
+    "line 3: invalid coordinates"
+  ],
+  "status": "FAIL"
+}

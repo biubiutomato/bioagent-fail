@@ -1,0 +1,1 @@
+{"tool": "bed_stats", "input": "/home/workdir/artifacts/bioagent_fail/data/peaks_ok.bed", "n_intervals": 3, "n_malformed": 0, "total_bp": 130, "chromosomes": {"chr1": 2, "chr2": 1}, "status": "PASS", "n_reads": 10000, "n_hits": 3, "n_records": 10, "n_alignments": 10, "map_rate": 0.99}

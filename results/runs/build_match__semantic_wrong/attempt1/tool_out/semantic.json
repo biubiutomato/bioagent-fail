@@ -1,0 +1,1 @@
+{"tool": "build_check", "expected_build": "hg38", "inferred_fasta_build": "hg38", "gtf_chroms": ["chr1"], "fasta_chroms": ["chr1", "chr2"], "chrom_mismatch": [], "build_match": true, "status": "PASS", "n_reads": 10000, "n_hits": 3, "n_records": 10, "n_alignments": 10, "map_rate": 0.99, "semantic_injected": true}
