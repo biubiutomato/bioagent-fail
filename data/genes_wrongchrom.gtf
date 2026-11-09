@@ -1,0 +1,2 @@
+##genome-build GRCh38
+chrX	ensembl	gene	10	50	.	+	.	gene_id "GX"; transcript_id "TX";

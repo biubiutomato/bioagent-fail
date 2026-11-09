@@ -1,0 +1,25 @@
+##genome-build GRCh38.p14
+chr1	ensembl	gene	20	50	.	+	.	gene_id "G1"; transcript_id "T1";
+chr1	ensembl	exon	20	50	.	+	.	gene_id "G1"; transcript_id "T1";
+chr1	ensembl	gene	60	90	.	+	.	gene_id "G2"; transcript_id "T2";
+chr1	ensembl	exon	60	90	.	+	.	gene_id "G2"; transcript_id "T2";
+chr1	ensembl	gene	100	130	.	+	.	gene_id "G3"; transcript_id "T3";
+chr1	ensembl	exon	100	130	.	+	.	gene_id "G3"; transcript_id "T3";
+chr1	ensembl	gene	140	170	.	+	.	gene_id "G4"; transcript_id "T4";
+chr1	ensembl	exon	140	170	.	+	.	gene_id "G4"; transcript_id "T4";
+chr1	ensembl	gene	180	210	.	+	.	gene_id "G5"; transcript_id "T5";
+chr1	ensembl	exon	180	210	.	+	.	gene_id "G5"; transcript_id "T5";
+chr1	ensembl	gene	220	250	.	+	.	gene_id "G6"; transcript_id "T6";
+chr1	ensembl	exon	220	250	.	+	.	gene_id "G6"; transcript_id "T6";
+chr1	ensembl	gene	260	290	.	+	.	gene_id "G7"; transcript_id "T7";
+chr1	ensembl	exon	260	290	.	+	.	gene_id "G7"; transcript_id "T7";
+chr1	ensembl	gene	300	330	.	+	.	gene_id "G8"; transcript_id "T8";
+chr1	ensembl	exon	300	330	.	+	.	gene_id "G8"; transcript_id "T8";
+chr1	ensembl	gene	340	370	.	+	.	gene_id "G9"; transcript_id "T9";
+chr1	ensembl	exon	340	370	.	+	.	gene_id "G9"; transcript_id "T9";
+chr1	ensembl	gene	380	410	.	+	.	gene_id "G10"; transcript_id "T10";
+chr1	ensembl	exon	380	410	.	+	.	gene_id "G10"; transcript_id "T10";
+chr1	ensembl	gene	420	450	.	+	.	gene_id "G11"; transcript_id "T11";
+chr1	ensembl	exon	420	450	.	+	.	gene_id "G11"; transcript_id "T11";
+chr1	ensembl	gene	460	490	.	+	.	gene_id "G12"; transcript_id "T12";
+chr1	ensembl	exon	460	490	.	+	.	gene_id "G12"; transcript_id "T12";
