@@ -1,0 +1,257 @@
+task_id,family,tool,fault,policy,gold,pred,reason,n_calls,exit_code,exact_match,safe,unsafe_accept,correct_abstain,unnecessary_retry,correct_retry
+fastq_qc__clean,fastq_qc,fastq_qc,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+fastq_qc__clean,fastq_qc,fastq_qc,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+fastq_qc__clean,fastq_qc,fastq_qc,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+fastq_qc__clean,fastq_qc,fastq_qc,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+fastq_qc__missing_file,fastq_qc,fastq_qc,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+fastq_qc__missing_file,fastq_qc,fastq_qc,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+fastq_qc__missing_file,fastq_qc,fastq_qc,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+fastq_qc__missing_file,fastq_qc,fastq_qc,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+fastq_qc__empty_output,fastq_qc,fastq_qc,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+fastq_qc__empty_output,fastq_qc,fastq_qc,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+fastq_qc__empty_output,fastq_qc,fastq_qc,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+fastq_qc__empty_output,fastq_qc,fastq_qc,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+fastq_qc__nonzero_exit,fastq_qc,fastq_qc,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+fastq_qc__nonzero_exit,fastq_qc,fastq_qc,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+fastq_qc__nonzero_exit,fastq_qc,fastq_qc,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+fastq_qc__nonzero_exit,fastq_qc,fastq_qc,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+fastq_qc__semantic_wrong,fastq_qc,fastq_qc,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+fastq_qc__semantic_wrong,fastq_qc,fastq_qc,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+fastq_qc__semantic_wrong,fastq_qc,fastq_qc,semantic_wrong,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: count_mismatch,1,0,1,1,0,1,0,0
+fastq_qc__semantic_wrong,fastq_qc,fastq_qc,semantic_wrong,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+fastq_qc__timeout,fastq_qc,fastq_qc,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+fastq_qc__timeout,fastq_qc,fastq_qc,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+fastq_qc__timeout,fastq_qc,fastq_qc,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+fastq_qc__timeout,fastq_qc,fastq_qc,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+fastq_qc__version_mismatch,fastq_qc,fastq_qc,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+fastq_qc__version_mismatch,fastq_qc,fastq_qc,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+fastq_qc__version_mismatch,fastq_qc,fastq_qc,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+fastq_qc__version_mismatch,fastq_qc,fastq_qc,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+fastq_qc__corrupted_output,fastq_qc,fastq_qc,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+fastq_qc__corrupted_output,fastq_qc,fastq_qc,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+fastq_qc__corrupted_output,fastq_qc,fastq_qc,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+fastq_qc__corrupted_output,fastq_qc,fastq_qc,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+gtf_parse__clean,gtf_parse,gtf_validate,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+gtf_parse__clean,gtf_parse,gtf_validate,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+gtf_parse__clean,gtf_parse,gtf_validate,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+gtf_parse__clean,gtf_parse,gtf_validate,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+gtf_parse__missing_file,gtf_parse,gtf_validate,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+gtf_parse__missing_file,gtf_parse,gtf_validate,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+gtf_parse__missing_file,gtf_parse,gtf_validate,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+gtf_parse__missing_file,gtf_parse,gtf_validate,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+gtf_parse__empty_output,gtf_parse,gtf_validate,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+gtf_parse__empty_output,gtf_parse,gtf_validate,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+gtf_parse__empty_output,gtf_parse,gtf_validate,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+gtf_parse__empty_output,gtf_parse,gtf_validate,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+gtf_parse__nonzero_exit,gtf_parse,gtf_validate,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+gtf_parse__nonzero_exit,gtf_parse,gtf_validate,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+gtf_parse__nonzero_exit,gtf_parse,gtf_validate,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+gtf_parse__nonzero_exit,gtf_parse,gtf_validate,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+gtf_parse__semantic_wrong,gtf_parse,gtf_validate,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+gtf_parse__semantic_wrong,gtf_parse,gtf_validate,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+gtf_parse__semantic_wrong,gtf_parse,gtf_validate,semantic_wrong,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: count_mismatch,1,0,1,1,0,1,0,0
+gtf_parse__semantic_wrong,gtf_parse,gtf_validate,semantic_wrong,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+gtf_parse__timeout,gtf_parse,gtf_validate,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+gtf_parse__timeout,gtf_parse,gtf_validate,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+gtf_parse__timeout,gtf_parse,gtf_validate,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+gtf_parse__timeout,gtf_parse,gtf_validate,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+gtf_parse__version_mismatch,gtf_parse,gtf_validate,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+gtf_parse__version_mismatch,gtf_parse,gtf_validate,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+gtf_parse__version_mismatch,gtf_parse,gtf_validate,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+gtf_parse__version_mismatch,gtf_parse,gtf_validate,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+gtf_parse__corrupted_output,gtf_parse,gtf_validate,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+gtf_parse__corrupted_output,gtf_parse,gtf_validate,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+gtf_parse__corrupted_output,gtf_parse,gtf_validate,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+gtf_parse__corrupted_output,gtf_parse,gtf_validate,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+faidx_build__clean,faidx_build,faidx,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+faidx_build__clean,faidx_build,faidx,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+faidx_build__clean,faidx_build,faidx,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+faidx_build__clean,faidx_build,faidx,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+faidx_build__missing_file,faidx_build,faidx,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+faidx_build__missing_file,faidx_build,faidx,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+faidx_build__missing_file,faidx_build,faidx,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+faidx_build__missing_file,faidx_build,faidx,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+faidx_build__empty_output,faidx_build,faidx,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+faidx_build__empty_output,faidx_build,faidx,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+faidx_build__empty_output,faidx_build,faidx,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+faidx_build__empty_output,faidx_build,faidx,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+faidx_build__nonzero_exit,faidx_build,faidx,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+faidx_build__nonzero_exit,faidx_build,faidx,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+faidx_build__nonzero_exit,faidx_build,faidx,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+faidx_build__nonzero_exit,faidx_build,faidx,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+faidx_build__semantic_wrong,faidx_build,faidx,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+faidx_build__semantic_wrong,faidx_build,faidx,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+faidx_build__semantic_wrong,faidx_build,faidx,semantic_wrong,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: count_mismatch,1,0,1,1,0,1,0,0
+faidx_build__semantic_wrong,faidx_build,faidx,semantic_wrong,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+faidx_build__timeout,faidx_build,faidx,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+faidx_build__timeout,faidx_build,faidx,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+faidx_build__timeout,faidx_build,faidx,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+faidx_build__timeout,faidx_build,faidx,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+faidx_build__version_mismatch,faidx_build,faidx,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+faidx_build__version_mismatch,faidx_build,faidx,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+faidx_build__version_mismatch,faidx_build,faidx,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+faidx_build__version_mismatch,faidx_build,faidx,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+faidx_build__corrupted_output,faidx_build,faidx,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+faidx_build__corrupted_output,faidx_build,faidx,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+faidx_build__corrupted_output,faidx_build,faidx,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+faidx_build__corrupted_output,faidx_build,faidx,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+blast_search__clean,blast_search,mini_blast,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+blast_search__clean,blast_search,mini_blast,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+blast_search__clean,blast_search,mini_blast,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+blast_search__clean,blast_search,mini_blast,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+blast_search__missing_file,blast_search,mini_blast,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+blast_search__missing_file,blast_search,mini_blast,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+blast_search__missing_file,blast_search,mini_blast,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+blast_search__missing_file,blast_search,mini_blast,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+blast_search__empty_output,blast_search,mini_blast,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+blast_search__empty_output,blast_search,mini_blast,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+blast_search__empty_output,blast_search,mini_blast,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+blast_search__empty_output,blast_search,mini_blast,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+blast_search__nonzero_exit,blast_search,mini_blast,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+blast_search__nonzero_exit,blast_search,mini_blast,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+blast_search__nonzero_exit,blast_search,mini_blast,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+blast_search__nonzero_exit,blast_search,mini_blast,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+blast_search__semantic_wrong,blast_search,mini_blast,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+blast_search__semantic_wrong,blast_search,mini_blast,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+blast_search__semantic_wrong,blast_search,mini_blast,semantic_wrong,verify_or_abstain,ABSTAIN,ACCEPT,validated tool output,1,0,0,0,1,0,0,0
+blast_search__semantic_wrong,blast_search,mini_blast,semantic_wrong,selfcheck,ABSTAIN,ACCEPT,no flags,1,0,0,0,1,0,0,0
+blast_search__timeout,blast_search,mini_blast,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+blast_search__timeout,blast_search,mini_blast,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+blast_search__timeout,blast_search,mini_blast,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+blast_search__timeout,blast_search,mini_blast,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+blast_search__version_mismatch,blast_search,mini_blast,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+blast_search__version_mismatch,blast_search,mini_blast,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+blast_search__version_mismatch,blast_search,mini_blast,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+blast_search__version_mismatch,blast_search,mini_blast,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+blast_search__corrupted_output,blast_search,mini_blast,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+blast_search__corrupted_output,blast_search,mini_blast,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+blast_search__corrupted_output,blast_search,mini_blast,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+blast_search__corrupted_output,blast_search,mini_blast,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+bed_intervals__clean,bed_intervals,bed_stats,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+bed_intervals__clean,bed_intervals,bed_stats,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+bed_intervals__clean,bed_intervals,bed_stats,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+bed_intervals__clean,bed_intervals,bed_stats,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+bed_intervals__missing_file,bed_intervals,bed_stats,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+bed_intervals__missing_file,bed_intervals,bed_stats,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+bed_intervals__missing_file,bed_intervals,bed_stats,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+bed_intervals__missing_file,bed_intervals,bed_stats,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+bed_intervals__empty_output,bed_intervals,bed_stats,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+bed_intervals__empty_output,bed_intervals,bed_stats,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+bed_intervals__empty_output,bed_intervals,bed_stats,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+bed_intervals__empty_output,bed_intervals,bed_stats,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+bed_intervals__nonzero_exit,bed_intervals,bed_stats,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+bed_intervals__nonzero_exit,bed_intervals,bed_stats,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+bed_intervals__nonzero_exit,bed_intervals,bed_stats,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+bed_intervals__nonzero_exit,bed_intervals,bed_stats,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+bed_intervals__semantic_wrong,bed_intervals,bed_stats,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+bed_intervals__semantic_wrong,bed_intervals,bed_stats,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+bed_intervals__semantic_wrong,bed_intervals,bed_stats,semantic_wrong,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: count_mismatch,1,0,1,1,0,1,0,0
+bed_intervals__semantic_wrong,bed_intervals,bed_stats,semantic_wrong,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+bed_intervals__timeout,bed_intervals,bed_stats,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+bed_intervals__timeout,bed_intervals,bed_stats,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+bed_intervals__timeout,bed_intervals,bed_stats,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+bed_intervals__timeout,bed_intervals,bed_stats,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+bed_intervals__version_mismatch,bed_intervals,bed_stats,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+bed_intervals__version_mismatch,bed_intervals,bed_stats,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+bed_intervals__version_mismatch,bed_intervals,bed_stats,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+bed_intervals__version_mismatch,bed_intervals,bed_stats,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+bed_intervals__corrupted_output,bed_intervals,bed_stats,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+bed_intervals__corrupted_output,bed_intervals,bed_stats,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+bed_intervals__corrupted_output,bed_intervals,bed_stats,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+bed_intervals__corrupted_output,bed_intervals,bed_stats,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+sam_qc__clean,sam_qc,sam_flagstat,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+sam_qc__clean,sam_qc,sam_flagstat,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+sam_qc__clean,sam_qc,sam_flagstat,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+sam_qc__clean,sam_qc,sam_flagstat,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+sam_qc__missing_file,sam_qc,sam_flagstat,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+sam_qc__missing_file,sam_qc,sam_flagstat,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+sam_qc__missing_file,sam_qc,sam_flagstat,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+sam_qc__missing_file,sam_qc,sam_flagstat,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+sam_qc__empty_output,sam_qc,sam_flagstat,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+sam_qc__empty_output,sam_qc,sam_flagstat,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+sam_qc__empty_output,sam_qc,sam_flagstat,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+sam_qc__empty_output,sam_qc,sam_flagstat,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+sam_qc__nonzero_exit,sam_qc,sam_flagstat,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+sam_qc__nonzero_exit,sam_qc,sam_flagstat,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+sam_qc__nonzero_exit,sam_qc,sam_flagstat,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+sam_qc__nonzero_exit,sam_qc,sam_flagstat,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+sam_qc__semantic_wrong,sam_qc,sam_flagstat,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+sam_qc__semantic_wrong,sam_qc,sam_flagstat,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+sam_qc__semantic_wrong,sam_qc,sam_flagstat,semantic_wrong,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: count_mismatch,1,0,1,1,0,1,0,0
+sam_qc__semantic_wrong,sam_qc,sam_flagstat,semantic_wrong,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+sam_qc__timeout,sam_qc,sam_flagstat,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+sam_qc__timeout,sam_qc,sam_flagstat,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+sam_qc__timeout,sam_qc,sam_flagstat,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+sam_qc__timeout,sam_qc,sam_flagstat,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+sam_qc__version_mismatch,sam_qc,sam_flagstat,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+sam_qc__version_mismatch,sam_qc,sam_flagstat,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+sam_qc__version_mismatch,sam_qc,sam_flagstat,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+sam_qc__version_mismatch,sam_qc,sam_flagstat,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+sam_qc__corrupted_output,sam_qc,sam_flagstat,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+sam_qc__corrupted_output,sam_qc,sam_flagstat,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+sam_qc__corrupted_output,sam_qc,sam_flagstat,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+sam_qc__corrupted_output,sam_qc,sam_flagstat,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+build_match__clean,build_match,build_check,clean,naive,ACCEPT,ACCEPT,exit 0 with some output,1,0,1,1,0,0,0,0
+build_match__clean,build_match,build_check,clean,retry_on_error,ACCEPT,ACCEPT,exit 0,1,0,1,1,0,0,0,0
+build_match__clean,build_match,build_check,clean,verify_or_abstain,ACCEPT,ACCEPT,validated tool output,1,0,1,1,0,0,0,0
+build_match__clean,build_match,build_check,clean,selfcheck,ACCEPT,ACCEPT,no flags,1,0,1,1,0,0,0,0
+build_match__missing_file,build_match,build_check,missing_file,naive,ABSTAIN,ACCEPT,continue despite error (naive),1,2,0,0,1,0,0,0
+build_match__missing_file,build_match,build_check,missing_file,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,2,0,0,1,0,0,0
+build_match__missing_file,build_match,build_check,missing_file,verify_or_abstain,ABSTAIN,ABSTAIN,input still missing,2,2,1,1,0,1,0,0
+build_match__missing_file,build_match,build_check,missing_file,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,2,1,1,0,1,0,0
+build_match__empty_output,build_match,build_check,empty_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+build_match__empty_output,build_match,build_check,empty_output,retry_on_error,ABSTAIN,ACCEPT,still empty after retry,2,0,0,0,1,0,0,0
+build_match__empty_output,build_match,build_check,empty_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+build_match__empty_output,build_match,build_check,empty_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+build_match__nonzero_exit,build_match,build_check,nonzero_exit,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,1,0,0,1,0,0,0
+build_match__nonzero_exit,build_match,build_check,nonzero_exit,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,1,0,0,1,0,0,0
+build_match__nonzero_exit,build_match,build_check,nonzero_exit,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,1,1,1,0,1,0,0
+build_match__nonzero_exit,build_match,build_check,nonzero_exit,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,1,1,1,0,1,0,0
+build_match__semantic_wrong,build_match,build_check,semantic_wrong,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+build_match__semantic_wrong,build_match,build_check,semantic_wrong,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+build_match__semantic_wrong,build_match,build_check,semantic_wrong,verify_or_abstain,ABSTAIN,ACCEPT,validated tool output,1,0,0,0,1,0,0,0
+build_match__semantic_wrong,build_match,build_check,semantic_wrong,selfcheck,ABSTAIN,ACCEPT,no flags,1,0,0,0,1,0,0,0
+build_match__timeout,build_match,build_check,timeout,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,124,0,0,1,0,0,0
+build_match__timeout,build_match,build_check,timeout,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,124,0,0,1,0,0,0
+build_match__timeout,build_match,build_check,timeout,verify_or_abstain,ABSTAIN,ABSTAIN,repeated timeout,2,124,1,1,0,1,0,0
+build_match__timeout,build_match,build_check,timeout,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,124,1,1,0,1,0,0
+build_match__version_mismatch,build_match,build_check,version_mismatch,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+build_match__version_mismatch,build_match,build_check,version_mismatch,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+build_match__version_mismatch,build_match,build_check,version_mismatch,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: build_mismatch,1,0,1,1,0,1,0,0
+build_match__version_mismatch,build_match,build_check,version_mismatch,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0
+build_match__corrupted_output,build_match,build_check,corrupted_output,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+build_match__corrupted_output,build_match,build_check,corrupted_output,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+build_match__corrupted_output,build_match,build_check,corrupted_output,verify_or_abstain,ABSTAIN,ABSTAIN,corrupted tool artifact,1,0,1,1,0,1,0,0
+build_match__corrupted_output,build_match,build_check,corrupted_output,selfcheck,ABSTAIN,ABSTAIN,corrupt,1,0,1,1,0,1,0,0
+fastq_qc__intrinsic_empty,fastq_qc,fastq_qc,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,4,0,0,1,0,0,0
+fastq_qc__intrinsic_empty,fastq_qc,fastq_qc,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,4,0,0,1,0,0,0
+fastq_qc__intrinsic_empty,fastq_qc,fastq_qc,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,4,1,1,0,1,0,0
+fastq_qc__intrinsic_empty,fastq_qc,fastq_qc,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,4,1,1,0,1,0,0
+gtf_parse__intrinsic_malformed,gtf_parse,gtf_validate,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,4,0,0,1,0,0,0
+gtf_parse__intrinsic_malformed,gtf_parse,gtf_validate,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,4,0,0,1,0,0,0
+gtf_parse__intrinsic_malformed,gtf_parse,gtf_validate,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,4,1,1,0,1,0,0
+gtf_parse__intrinsic_malformed,gtf_parse,gtf_validate,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,4,1,1,0,1,0,0
+blast_search__intrinsic_nohit,blast_search,mini_blast,clean,naive,VERIFY,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+blast_search__intrinsic_nohit,blast_search,mini_blast,clean,retry_on_error,VERIFY,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+blast_search__intrinsic_nohit,blast_search,mini_blast,clean,verify_or_abstain,VERIFY,VERIFY,zero BLAST hits need confirmation,1,0,1,1,0,0,0,0
+blast_search__intrinsic_nohit,blast_search,mini_blast,clean,selfcheck,VERIFY,VERIFY,warning flags: no_hit,1,0,1,1,0,0,0,0
+build_match__intrinsic_hg19,build_match,build_check,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,5,0,0,1,0,0,0
+build_match__intrinsic_hg19,build_match,build_check,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,5,0,0,1,0,0,0
+build_match__intrinsic_hg19,build_match,build_check,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,5,1,1,0,1,0,0
+build_match__intrinsic_hg19,build_match,build_check,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,5,1,1,0,1,0,0
+sam_qc__intrinsic_empty,sam_qc,sam_flagstat,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,4,0,0,1,0,0,0
+sam_qc__intrinsic_empty,sam_qc,sam_flagstat,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,4,0,0,1,0,0,0
+sam_qc__intrinsic_empty,sam_qc,sam_flagstat,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,4,1,1,0,1,0,0
+sam_qc__intrinsic_empty,sam_qc,sam_flagstat,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,4,1,1,0,1,0,0
+bed_intervals__intrinsic_bad,bed_intervals,bed_stats,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,4,0,0,1,0,0,0
+bed_intervals__intrinsic_bad,bed_intervals,bed_stats,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,4,0,0,1,0,0,0
+bed_intervals__intrinsic_bad,bed_intervals,bed_stats,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,4,1,1,0,1,0,0
+bed_intervals__intrinsic_bad,bed_intervals,bed_stats,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,4,1,1,0,1,0,0
+faidx_build__intrinsic_empty,faidx_build,faidx,clean,naive,ABSTAIN,ACCEPT,non-zero exit but stdout present,1,4,0,0,1,0,0,0
+faidx_build__intrinsic_empty,faidx_build,faidx,clean,retry_on_error,ABSTAIN,ACCEPT,gave up retrying; accept last result,2,4,0,0,1,0,0,0
+faidx_build__intrinsic_empty,faidx_build,faidx,clean,verify_or_abstain,ABSTAIN,ABSTAIN,repeated runtime error,2,4,1,1,0,1,0,0
+faidx_build__intrinsic_empty,faidx_build,faidx,clean,selfcheck,ABSTAIN,ABSTAIN,unresolved error,2,4,1,1,0,1,0,0
+gtf_parse__wrong_chrom,gtf_parse,gtf_validate,clean,naive,ABSTAIN,ACCEPT,exit 0 with some output,1,0,0,0,1,0,0,0
+gtf_parse__wrong_chrom,gtf_parse,gtf_validate,clean,retry_on_error,ABSTAIN,ACCEPT,exit 0,1,0,0,0,1,0,0,0
+gtf_parse__wrong_chrom,gtf_parse,gtf_validate,clean,verify_or_abstain,ABSTAIN,ABSTAIN,semantic inconsistency: chrom_mismatch,1,0,1,1,0,1,0,0
+gtf_parse__wrong_chrom,gtf_parse,gtf_validate,clean,selfcheck,ABSTAIN,ABSTAIN,high-severity inconsistency,1,0,1,1,0,1,0,0

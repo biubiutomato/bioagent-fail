@@ -1,0 +1,58 @@
+[
+  {
+    "policy": "naive",
+    "n": 64,
+    "exact_match": 0.1094,
+    "safe": 0.1094,
+    "unsafe_accept": 0.8906,
+    "correct_abstain": 0.0,
+    "unnecessary_retry": 0.0,
+    "correct_retry": 0.0,
+    "mean_calls": 1.0,
+    "exact_clean": 0.4667,
+    "unsafe_injected": 1.0,
+    "exact_injected": 0.0
+  },
+  {
+    "policy": "retry_on_error",
+    "n": 64,
+    "exact_match": 0.1094,
+    "safe": 0.1094,
+    "unsafe_accept": 0.8906,
+    "correct_abstain": 0.0,
+    "unnecessary_retry": 0.0,
+    "correct_retry": 0.0,
+    "mean_calls": 1.531,
+    "exact_clean": 0.4667,
+    "unsafe_injected": 1.0,
+    "exact_injected": 0.0
+  },
+  {
+    "policy": "selfcheck",
+    "n": 64,
+    "exact_match": 0.9688,
+    "safe": 0.9688,
+    "unsafe_accept": 0.0312,
+    "correct_abstain": 0.9643,
+    "unnecessary_retry": 0.0,
+    "correct_retry": 0.0,
+    "mean_calls": 1.422,
+    "exact_clean": 1.0,
+    "unsafe_injected": 0.0408,
+    "exact_injected": 0.9592
+  },
+  {
+    "policy": "verify_or_abstain",
+    "n": 64,
+    "exact_match": 0.9688,
+    "safe": 0.9688,
+    "unsafe_accept": 0.0312,
+    "correct_abstain": 0.9643,
+    "unnecessary_retry": 0.0,
+    "correct_retry": 0.0,
+    "mean_calls": 1.422,
+    "exact_clean": 1.0,
+    "unsafe_injected": 0.0408,
+    "exact_injected": 0.9592
+  }
+]

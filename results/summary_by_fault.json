@@ -1,0 +1,322 @@
+[
+  {
+    "policy": "naive",
+    "fault": "clean",
+    "n": 15,
+    "exact": 0.4667,
+    "unsafe_accept": 0.5333,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "corrupted_output",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "empty_output",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "missing_file",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "nonzero_exit",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "semantic_wrong",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "timeout",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "naive",
+    "fault": "version_mismatch",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "clean",
+    "n": 15,
+    "exact": 0.4667,
+    "unsafe_accept": 0.5333,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.4
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "corrupted_output",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "empty_output",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "missing_file",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "nonzero_exit",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "semantic_wrong",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "timeout",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "retry_on_error",
+    "fault": "version_mismatch",
+    "n": 7,
+    "exact": 0.0,
+    "unsafe_accept": 1.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "clean",
+    "n": 15,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.4667,
+    "mean_calls": 1.4
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "corrupted_output",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "empty_output",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "missing_file",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "nonzero_exit",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "semantic_wrong",
+    "n": 7,
+    "exact": 0.7143,
+    "unsafe_accept": 0.2857,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.7143,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "timeout",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "selfcheck",
+    "fault": "version_mismatch",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "clean",
+    "n": 15,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.4667,
+    "mean_calls": 1.4
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "corrupted_output",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "empty_output",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "missing_file",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "nonzero_exit",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "semantic_wrong",
+    "n": 7,
+    "exact": 0.7143,
+    "unsafe_accept": 0.2857,
+    "correct_retry": 0.0,
+    "correct_abstain": 0.7143,
+    "mean_calls": 1.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "timeout",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 2.0
+  },
+  {
+    "policy": "verify_or_abstain",
+    "fault": "version_mismatch",
+    "n": 7,
+    "exact": 1.0,
+    "unsafe_accept": 0.0,
+    "correct_retry": 0.0,
+    "correct_abstain": 1.0,
+    "mean_calls": 1.0
+  }
+]
